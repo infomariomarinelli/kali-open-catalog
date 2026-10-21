@@ -1,0 +1,54 @@
+{
+  "name": "kali-open-food-catalog",
+  "title": "Kali Open Food Catalog (Italian Packaged Foods Dataset)",
+  "version": "0.2.0",
+  "build_id": "off_italy_20260925_step14_14e_1",
+  "build_timestamp": "2026-09-25T11:51:42Z",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "contents_license": "DbCL-1.0",
+  "contents_license_url": "https://opendatacommons.org/licenses/dbcl/1-0/",
+  "source_provider": "open_food_facts",
+  "source_provider_url": "https://world.openfoodfacts.org",
+  "source_dump_date": "2026-09-24",
+  "market_scope": "Italy (Italian market packaged foods with valid barcodes)",
+  "sqlite_seed_file": "off_italy_seed.db",
+  "sqlite_file_size_bytes": 133718016,
+  "sqlite_checksum_sha256": "41e65549aedc99effe5854136325d54d954766a9807bf19a7a6cef9141603d96",
+  "jsonl_gz_file": "kali_open_food_catalog.jsonl.gz",
+  "jsonl_gz_size_bytes": 15482284,
+  "jsonl_gz_checksum_sha256": "7842cfe1062da222cb99629bdbab34833f682572acef7a72cbab3f30ff806e90",
+  "statistics": {
+    "foods_count": 181308,
+    "food_portions_count": 53540,
+    "primary_cluster_search_count": 172738,
+    "secondary_cluster_count": 8570,
+    "barcodes_unique_count": 181308
+  },
+  "tables": [
+    {
+      "name": "foods",
+      "description": "Italian market packaged food products with nutritional values per 100g/100ml",
+      "row_count": 181308,
+      "primary_key": "id"
+    },
+    {
+      "name": "food_portions",
+      "description": "Verified serving and portion weights in grams",
+      "row_count": 53540,
+      "primary_key": "id",
+      "foreign_key": "food_id -> foods(id)"
+    },
+    {
+      "name": "_catalog_build_metadata",
+      "description": "Cryptographic and build provenance metadata",
+      "row_count": 1,
+      "primary_key": "build_id"
+    }
+  ],
+  "compliance": {
+    "odbl_section_4_6": "Technical provision for Derived Database access implemented via open machine-readable dataset (compressed JSONL and SQLite DDL), schema specifications, and standalone reproduction utilities",
+    "attribution_notice": "Contains information from Open Food Facts, available under the Open Database License (ODbL) v1.0. Open Food Facts is not a sponsor, developer, or endorser of Kali.",
+    "photographic_content": "None. The database contains zero image files, binary blobs, or image URLs."
+  }
+}

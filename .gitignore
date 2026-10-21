@@ -1,0 +1,18 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated local SQLite databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Temporary test files
+/tmp/
+*.tmp
